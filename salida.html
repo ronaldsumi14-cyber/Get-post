@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> encuesta</title>
+</head>
+<body>
+    <h1> datos recibidos</h1>
+    <p> nombre: {{nombre}}</p>
+    {% if lenguajes%}
+    <p> los lenguajes de programacion que usas mas son :</p>
+    <ul>
+        {% for  item in lenguajes %}
+        <li>{{item}}</li>
+        {% endfor %}
+    </ul>
+    {% else%}
+    <p> no hay seleccion de lenguajes</p>
+    {% endif %}
+    <a href="{{url_for('index')}}"> volver ala encuesta</a>
+</body>
+</html>
